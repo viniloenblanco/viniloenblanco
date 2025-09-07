@@ -5,6 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vinilo en blanco</title>
+    <style>
+    /* Efecto de fondo respirando */
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #111; /* color inicial */
+      animation: respirar 6s infinite alternate;
+      color: white; /* texto visible sobre fondo oscuro */
+      font-family: Arial, sans-serif;
+    }
+
+    @keyframes respirar {
+      0%   { background-color: #111; }
+      50%  { background-color: #222; }
+      100% { background-color: #111; }
+    }
+  </style>
 </head>
 <body style="font-family: Arial; text-align: center; background: #111; color: #eee; padding: 40px;">
   <h1><img src="logo.png" alt="Logo de la banda" width="250"></h1>
