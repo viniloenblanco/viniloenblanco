@@ -67,8 +67,40 @@ La banda fue formada en el año 2016 en Villa Regina, Río Negro, disuelta en 20
      <p> 
         <img src="G.jpg" alt="Vinilo en Blanco banda" width="100%" style="margin-top:20px;">
       </p>
-     </p>
+     <p>
   <h3 style="margin-top:75px">DISCOGRAFÍA</h3>
-      <p> 
+      </p> 
+     <p>    
+  <div class="slider">
+  <img id="mainImage" src="foto1.png" alt="Imagen principal">
+</div>
+
+<div class="thumbnails">
+  <img src="foto1.png" alt="Foto 1" onclick="showImage(0)" class="active">
+  <img src="foto2.png" alt="Foto 2" onclick="showImage(1)">
+  <img src="foto3.png" alt="Foto 3" onclick="showImage(2)">
+</div>
+
+<script>
+  const images = ["foto1.png", "foto2.png", "foto3.png"];
+  let current = 0;
+
+  function showImage(index) {
+    current = index;
+    document.getElementById("mainImage").src = images[index];
+    // Actualiza miniaturas activas
+    document.querySelectorAll(".thumbnails img").forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === index);
+    });
+  }
+
+  // Cambio automático cada 5 segundos
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }, 5000);
+</script>     
+   </p>        
+        
 </body>
 </html>
