@@ -25,6 +25,35 @@
   50%  { background-color: #555; }
   75%  { background-color: #333; }
   100% { background-color: #111; }
+}.slider {
+  width: 500px;      
+  margin: 0 auto;    
+}
+
+.slider img {
+  width: 100%;  
+  height: auto; 
+}
+
+.thumbnails {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.thumbnails img {
+  width: 80px;      
+  height: 50px;     
+  object-fit: cover; 
+  cursor: pointer;   
+  border: 2px solid transparent;  
+  transition: border 0.3s;
+}
+
+.thumbnails img.active {
+  border: 2px solid #ff6600;
 }
   </style>
 </head>
