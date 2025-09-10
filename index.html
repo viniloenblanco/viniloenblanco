@@ -129,9 +129,22 @@ La banda fue formada en el año 2016 en Villa Regina, Río Negro, disuelta en 20
             <p>ALMOHADA(Single)(2025)</p>
               <p><div style="display:flex; justify-content:center;"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1DHeu0M70iQ7bjJw5PKChS?utm_source=generator" width="90%" height=250 frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div></p>
           <p>
-<div id="videoWrapper">
+<div id="videoWrapper" style="position: relative; width: 640px; height: 360px; margin: 0 auto;">
   <div id="player"></div>
-  <button id="customPlay">▶</button>
+  <button id="customPlay" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: gray;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+  ">▶</button>
 </div>
 
 <script>
@@ -139,12 +152,12 @@ La banda fue formada en el año 2016 en Villa Regina, Río Negro, disuelta en 20
   let playBtn = document.getElementById('customPlay');
 
   function onYouTubeIframeAPIReady() {
+    // Creamos el reproductor con un video inicial (primer video de la playlist)
     player = new YT.Player('player', {
       height: '360',
       width: '640',
+      videoId: '1SfgavwSkXc', // primer vídeo de la playlist
       playerVars: {
-        listType: 'playlist',
-        list: 'PLkelDjjdRNSYBEe-Zdw64rhEaKcqh4Nea', // 👈 tu playlist
         controls: 0,
         modestbranding: 1,
         rel: 0
@@ -157,8 +170,15 @@ La banda fue formada en el año 2016 en Villa Regina, Río Negro, disuelta en 20
 
   function onPlayerReady() {
     playBtn.onclick = function() {
+      // Cargamos la playlist completa y reproducimos
+      player.loadPlaylist({
+        listType: 'playlist',
+        list: 'PLkelDjjdRNSYBEe-Zdw64rhEaKcqh4Nea',
+        index: 0,
+        suggestedQuality: 'default'
+      });
       player.playVideo();
-      this.style.display = 'none'; // oculta el botón al reproducir
+      this.style.display = 'none';
     };
   }
 </script></p>
