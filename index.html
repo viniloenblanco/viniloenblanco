@@ -58,6 +58,7 @@
 }
   </style>
   
+  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body style="font-family: Arial; text-align: center; background: #111; color: #eee; padding: 40px;">
   <h1><img src="logo.png" alt="Vinilo en Blanco" width="250"></h1>
@@ -68,8 +69,7 @@
     <a href="https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF" target="_blank"><img src="spotilogo.svg" alt="Spotify" width="63" style="margin-right:15px;"></a>    
     <a href="https://www.youtube.com/@ViniloEnBlanco" target="_blank"><img src="ytlogo.svg" alt="Youtube" width="67"></a>
   </p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=m82_v6aP5CsxHAU5&amp;list=PLkelDjjdRNSYBEe-Zdw64rhEaKcqh4Nea&rel=0&autoplay=1&mute=0&rel=0&controls=0&color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</p>
+   <p><iframe width="250" height="250" src="https://www.youtube.com/embed/1SfgavwSkXc?si=L8H9aKJcGJJ6o5_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p><a href="mailto:viniloenblancobanda@gmail.com"><img src="correologo.png" alt="Contacto" width="40" style="filter: invert(85%);"></a></p>
 
   <h2 style="margin-top:50px">INFO</h2>
@@ -129,6 +129,58 @@ La banda fue formada en el año 2016 en Villa Regina, Río Negro, disuelta en 20
             <p>ALMOHADA(Single)(2025)</p>
               <p><div style="display:flex; justify-content:center;"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1DHeu0M70iQ7bjJw5PKChS?utm_source=generator" width="90%" height=250 frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div></p>
           <p>
-</p>
+<div id="videoWrapper" style="position: relative; width: 640px; height: 360px; margin: 0 auto;">
+  <div id="player"></div>
+  <button id="customPlay" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: gray;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+  ">▶</button>
+</div>
+
+<script>
+  let player;
+  let playBtn = document.getElementById('customPlay');
+
+  function onYouTubeIframeAPIReady() {
+    // Creamos el reproductor con un video inicial (primer video de la playlist)
+    player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: '1SfgavwSkXc', // primer vídeo de la playlist
+      playerVars: {
+        controls: 0,
+        modestbranding: 1,
+        rel: 0
+      },
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  }
+
+  function onPlayerReady() {
+    playBtn.onclick = function() {
+      // Cargamos la playlist completa y reproducimos
+      player.loadPlaylist({
+        listType: 'playlist',
+        list: 'PLkelDjjdRNSYBEe-Zdw64rhEaKcqh4Nea',
+        index: 0,
+        suggestedQuality: 'default'
+      });
+      player.playVideo();
+      this.style.display = 'none';
+    };
+  }
+</script></p>
            </body>
 </html>
