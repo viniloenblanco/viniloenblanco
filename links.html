@@ -18,45 +18,64 @@
       background: #111;
       color: #eee;
       text-align: center;
+      font-size: 16px; /* base legible */
     }
     h1 {
       margin-bottom: 30px;
     }
 
     table {
-      width: 80%;
-      max-width: 90%;
+      width: 90%;
+      max-width: 800px;
       margin: 0 auto;
       border-collapse: collapse;
     }
 
     td {
-      font-size: 25%;
       border: none;
-      padding: 8px 10px;
-      vertical-align: middle;
+      padding: 10px;
+      vertical-align: top;
     }
 
-    td.link-crudo span {
-      font-size: 15%;
-      word-break: break-all;
-      display: inline-block;
-      max-width: 250px;
+    .plataforma {
+      text-align: left;
+      margin-bottom: 20px;
     }
 
-    button {
-      padding: 5px 10px;
+    .plataforma .nombre {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .plataforma .link-crudo span {
+      font-size: 1rem;
+      word-break: break-word;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .plataforma .botones button {
+      padding: 6px 12px;
       cursor: pointer;
       border: none;
       border-radius: 5px;
       background-color: #222;
       color: white;
-      font-size: 25%;
+      font-size: 0.9rem;
       transition: background-color 0.3s;
+      margin-right: 5px;
+      margin-bottom: 5px;
     }
 
-    button:hover {
+    .plataforma .botones button:hover {
       background-color: #555;
+    }
+
+    @media (max-width: 480px) {
+      .plataforma .botones button {
+        width: 100%; /* botones verticales en móvil */
+      }
     }
   </style>
 </head>
@@ -64,64 +83,119 @@
 
 <h1>LINKS</h1>
 <h2><img src="logo.png" alt="Vinilo en Blanco" width="85%"></h2>
-<p style="font-size: 11px;">Links Oficiales de Vinilo en Blanco</p>
-<p style="font-size: 11px;">16 de Septiembre de 2025.</p>
+<p style="font-size: 0.9rem;">Links Oficiales de Vinilo en Blanco</p>
+<p style="font-size: 0.9rem;">16 de Septiembre de 2025.</p>
 
 <table>
   <tbody>
     <tr>
-      <td>Instagram</td>
-      <td class="link-crudo"><span>https://instagram.com/viniloenblanco</span></td>
-      <td><button onclick="window.open('https://instagram.com/viniloenblanco','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://instagram.com/viniloenblanco')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">Instagram</div>
+          <div class="link-crudo"><span>https://instagram.com/viniloenblanco</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://instagram.com/viniloenblanco','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://instagram.com/viniloenblanco')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td>YouTube</td>
-      <td class="link-crudo"><span>https://www.youtube.com/@ViniloEnBlanco</span></td>
-      <td><button onclick="window.open('https://www.youtube.com/@ViniloEnBlanco','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://www.youtube.com/@ViniloEnBlanco')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">YouTube</div>
+          <div class="link-crudo"><span>https://www.youtube.com/@ViniloEnBlanco</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://www.youtube.com/@ViniloEnBlanco','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://www.youtube.com/@ViniloEnBlanco')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td>Spotify</td>
-      <td class="link-crudo"><span>https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF</span></td>
-      <td><button onclick="window.open('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">Spotify</div>
+          <div class="link-crudo"><span>https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF')">Copiar</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <!-- Repite el mismo patrón para las demás plataformas -->
+    <tr>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">SoundCloud</div>
+          <div class="link-crudo"><span>https://www.soundcloud.com/viniloenblanco</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://www.soundcloud.com/viniloenblanco','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://www.soundcloud.com/viniloenblanco')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td>SoundCloud</td>
-      <td class="link-crudo"><span>https://www.soundcloud.com/viniloenblanco</span></td>
-      <td><button onclick="window.open('https://www.soundcloud.com/viniloenblanco','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://www.soundcloud.com/viniloenblanco')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">BandCamp</div>
+          <div class="link-crudo"><span>https://viniloenblanco.bandcamp.com/</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://viniloenblanco.bandcamp.com/','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://viniloenblanco.bandcamp.com/')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td>BandCamp</td>
-      <td class="link-crudo"><span>https://viniloenblanco.bandcamp.com/</span></td>
-      <td><button onclick="window.open('https://viniloenblanco.bandcamp.com/','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://viniloenblanco.bandcamp.com/')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">TikTok</div>
+          <div class="link-crudo"><span>https://www.tiktok.com/@viniloenblanco</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://www.tiktok.com/@viniloenblanco','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://www.tiktok.com/@viniloenblanco')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td>TikTok</td>
-      <td class="link-crudo"><span>https://www.tiktok.com/@viniloenblanco</span></td>
-      <td><button onclick="window.open('https://www.tiktok.com/@viniloenblanco','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://www.tiktok.com/@viniloenblanco')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">Facebook</div>
+          <div class="link-crudo"><span>https://m.facebook.com/61580283870806/</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://m.facebook.com/61580283870806/','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://m.facebook.com/61580283870806/')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td>Facebook</td>
-      <td class="link-crudo"><span>https://m.facebook.com/61580283870806/</span></td>
-      <td><button onclick="window.open('https://m.facebook.com/61580283870806/','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://m.facebook.com/61580283870806/')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">Threads</div>
+          <div class="link-crudo"><span>https://www.threads.com/@viniloenblanco</span></div>
+          <div class="botones">
+            <button onclick="window.open('https://www.threads.com/@viniloenblanco','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('https://www.threads.com/@viniloenblanco')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td>Threads</td>
-      <td class="link-crudo"><span>https://www.threads.com/@viniloenblanco</span></td>
-      <td><button onclick="window.open('https://www.threads.com/@viniloenblanco','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('https://www.threads.com/@viniloenblanco')">Copiar</button></td>
-    </tr>
-    <tr>
-      <td>Correo</td>
-      <td class="link-crudo"><span>viniloenblancobanda@gmail.com</span></td>
-      <td><button onclick="window.open('mailto:viniloenblancobanda@gmail.com','_blank')">Abrir</button></td>
-      <td><button onclick="copiarAlPortapapeles('viniloenblancobanda@gmail.com')">Copiar</button></td>
+      <td colspan="4">
+        <div class="plataforma">
+          <div class="nombre">Correo</div>
+          <div class="link-crudo"><span>viniloenblancobanda@gmail.com</span></div>
+          <div class="botones">
+            <button onclick="window.open('mailto:viniloenblancobanda@gmail.com','_blank')">Abrir</button>
+            <button onclick="copiarAlPortapapeles('viniloenblancobanda@gmail.com')">Copiar</button>
+          </div>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
