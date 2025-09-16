@@ -55,6 +55,6 @@ padding: 2% 10%;}
 .l {
       color: inherit;          /* mismo color que el texto */
       text-decoration: none;   /* sin subrayado */
-      cursor: default;         /* NO aparece la manito */
+      cursor: pointer;         /* NO aparece la manito */
       pointer-events: auto;    /* mantiene el click activo */
     }
