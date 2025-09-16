@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="description" content="Biografia oficial de la banda Vinilo en blanco">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinilo en blanco - Biografía</title>
+  <meta name="description" content="Biografia oficial de Vinilo en Blanco. Banda argentina de indierock. Música, novedades y contacto.">
+<meta name="keywords" content="vinilo en blanco, biografia, musica, vinilo, blanco, banda, artista, música, rock, pop, canciones, oficial, argentina, indierock">
+<meta name="author" content="Vinilo en Blanco">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family: Arial; text-align: center; background: #111; color: #eee;">
+  <h1>BIOGRAFÍA</h1>
+   <p>    
+  <div class="slider">
+  <img id="mainImage" src="A.JPG" alt="Imagen principal">
+</div>
+
+<div class="thumbnails">
+  <img src="A.JPG" alt="Ariel y Pichu de Vinilo en Blanco" onclick="showImage(0)" class="active">
+  <img src="B.JPG" alt="Ariel de Vinilo en Blanco" onclick="showImage(1)">
+  <img src="C.JPG" alt="Pichu de Vinilo en Blanco" onclick="showImage(2)">
+  <img src="D.JPG" alt="IXI de Vinilo en Blanco" onclick="showImage(3)">
+  <img src="E.JPG" alt="Vinilo en Blanco en vivo" onclick="showImage(4)">
+  <img src="F.JPG" alt="Vinilo en Blanco en vivo en la Vendimia" onclick="showImage(5)">
+  <img src="G.JPG" alt="Vinilo en Blanco banda" onclick="showImage(6)">
+</div>
+
+<script>
+  const images = ["A.JPG", "B.JPG", "C.JPG", "D.JPG", "E.JPG", "F.JPG", "G.JPG"];
+  let current = 0;
+
+  function showImage(index) {
+    current = index;
+    document.getElementById("mainImage").src = images[index];
+    // Actualiza miniaturas activas
+    document.querySelectorAll(".thumbnails img").forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === index);
+    });
+  }
+
+  // Cambio automático cada 5 segundos
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }, 5000);
+</script>     
+   </p>        
+  <p style="font-size: 11px;">16 de Septiembre de 2025.</p>
+
+   <h2 style="text-align: center"><a href="/index.html" class="l">VOLVER AL INICIO</a></h2>
+    
+    <h2 style="text-align: left; margin-top:12%">PRENSA:</h2>
+<p style="text-align: left; font-size: 12px;"><a href="https://medium.com/@RioNegro/vinilo-en-blanco-la-banda-indie-rock-de-villa-regina-que-renaci%C3%B3-en-2024-e98c6758eb80" target="_blank" class="l">12/09/2025 - Vinilo en Blanco: la banda indie rock de Villa Regina que renació en 2024.</a>   
+  
+  </p>
+  <div id="footer-placeholder"></div>
+<script>
+fetch('bottom.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script> </body>
+</html>
