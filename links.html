@@ -50,7 +50,44 @@
   <h1>LINKS</h1>
     <h2><img src="logo.png" alt="Vinilo en Blanco" width="85%"></h2>
    <p style="font-size: 11px;">16 de Septiembre de 2025.</p>
-Spotify
+  <table>
+    <tbody>
+      <tr>
+        <td>Spotify</td>
+        <td class="link-crudo">https://spotify.com/tu-banda</td>
+        <td><button onclick="window.open('https://spotify.com/tu-banda','_blank')">Abrir</button></td>
+        <td><button onclick="copiarAlPortapapeles('https://spotify.com/tu-banda')">Copiar</button></td>
+      </tr>
+      <tr>
+        <td>YouTube</td>
+        <td class="link-crudo">https://youtube.com/tu-banda</td>
+        <td><button onclick="window.open('https://youtube.com/tu-banda','_blank')">Abrir</button></td>
+        <td><button onclick="copiarAlPortapapeles('https://youtube.com/tu-banda')">Copiar</button></td>
+      </tr>
+      <tr>
+        <td>Medium</td>
+        <td class="link-crudo">https://medium.com/tu-banda</td>
+        <td><button onclick="window.open('https://medium.com/tu-banda','_blank')">Abrir</button></td>
+        <td><button onclick="copiarAlPortapapeles('https://medium.com/tu-banda')">Copiar</button></td>
+      </tr>
+      <tr>
+        <td>Instagram</td>
+        <td class="link-crudo">https://instagram.com/tu-banda</td>
+        <td><button onclick="window.open('https://instagram.com/tu-banda','_blank')">Abrir</button></td>
+        <td><button onclick="copiarAlPortapapeles('https://instagram.com/tu-banda')">Copiar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function copiarAlPortapapeles(texto) {
+      navigator.clipboard.writeText(texto).then(() => {
+        alert('¡Link copiado al portapapeles!');
+      }).catch(err => {
+        alert('Error al copiar: ' + err);
+      });
+    }
+  </script>
   
    <h2 style="text-align: center"><a href="/index.html" class="l">VOLVER AL INICIO</a></h2>
     
