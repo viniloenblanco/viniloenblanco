@@ -4,4 +4,9 @@
     <loc>https://viniloenblanco.com.ar/</loc>
     <priority>1.0</priority>
   </url>
+<url>
+  <loc>https://viniloenblanco.com.ar/bio.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
