@@ -84,8 +84,17 @@
         <a href="https://www.soundcloud.com/viniloenblanco" target="_blank"><img src="soundcloudlogo.png" alt="SoundCloud de Vinilo en Blanco" width="10%" style="filter: invert(100%) brightness(175%);"></a>
   </p>
            <p>
+            <div id="sliderfull-placeholder"></div>
+<script>
+fetch('slider.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('sliderfull-placeholder').innerHTML = data);
+</script>
 </p>
-  <p style="font-size: 11px;">Web en desarrollo by ixi.</p>
-            <p style="font-size: 8px;">Vinilo en Blanco ® – Marca registrada (INPI)</p>
-           </body>
+  <div id="footer-placeholder"></div>
+<script>
+fetch('bottom.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script> </body>
 </html>
