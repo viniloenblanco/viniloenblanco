@@ -13,6 +13,41 @@
 </head>
 <body style="font-family: Arial; text-align: center; background: #111; color: #eee;">
   <h1>BIOGRAFÍA</h1>
+   <p>    
+  <div class="slider">
+  <img id="mainImage" src="A.JPG" alt="Imagen principal">
+</div>
+
+<div class="thumbnails">
+  <img src="A.JPG" alt="Ariel y Pichu de Vinilo en Blanco" onclick="showImage(0)" class="active">
+  <img src="B.JPG" alt="Ariel de Vinilo en Blanco" onclick="showImage(1)">
+  <img src="C.JPG" alt="Pichu de Vinilo en Blanco" onclick="showImage(2)">
+  <img src="D.JPG" alt="IXI de Vinilo en Blanco" onclick="showImage(3)">
+  <img src="E.JPG" alt="Vinilo en Blanco en vivo" onclick="showImage(4)">
+  <img src="F.JPG" alt="Vinilo en Blanco en vivo en la Vendimia" onclick="showImage(5)">
+  <img src="G.JPG" alt="Vinilo en Blanco banda" onclick="showImage(6)">
+</div>
+
+<script>
+  const images = ["A.JPG", "B.JPG", "C.JPG", "D.JPG", "E.JPG", "F.JPG", "G.JPG"];
+  let current = 0;
+
+  function showImage(index) {
+    current = index;
+    document.getElementById("mainImage").src = images[index];
+    // Actualiza miniaturas activas
+    document.querySelectorAll(".thumbnails img").forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === index);
+    });
+  }
+
+  // Cambio automático cada 5 segundos
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }, 5000);
+</script>     
+   </p>        
   <p style="font-size: 11px;">16 de Septiembre de 2025.</p>
 
  <p>Vinilo en Blanco nació en 2015 en Villa Regina como un proyecto escolar que rápidamente se convirtió en algo más. La incorporación de Pichu como baterista y vocalista, junto a Ariel en guitarra e Ixi en bajo, consolidó una formación que pronto descubriría su química única. El trío comenzó a forjar una identidad propia y a enamorar al público local con su energía.</p>
