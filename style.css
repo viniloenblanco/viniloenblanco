@@ -52,7 +52,7 @@ body {
 padding: 2% 10%;}
 }
 
-a {
+.l {
       color: inherit;          /* mismo color que el texto */
       text-decoration: none;   /* sin subrayado */
       cursor: default;         /* NO aparece la manito */
