@@ -11,28 +11,36 @@
 <meta name="keywords" content="vinilo en blanco, links, musica, vinilo, blanco, banda, artista, música, rock, pop, canciones, oficial, argentina, indierock">
 <meta name="author" content="Vinilo en Blanco">
 <link rel="stylesheet" href="style.css">
-      <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
-    }
-
-    h1 {
+      background: #111;
+      color: #eee;
       text-align: center;
+    }
+    h1 {
       margin-bottom: 30px;
     }
 
     table {
       width: 100%;
-      border-collapse: collapse;
       max-width: 800px;
       margin: 0 auto;
+      border-collapse: collapse;
     }
 
     td {
       border: none;
-      padding: 10px;
-      text-align: left;
+      padding: 8px 10px;
+      vertical-align: middle;
+    }
+
+    td.link-crudo span {
+      font-size: 11px;
+      word-break: break-all;
+      display: inline-block;
+      max-width: 250px;
     }
 
     button {
@@ -40,93 +48,102 @@
       cursor: pointer;
       border: none;
       border-radius: 5px;
-      background-color: #222:
+      background-color: #222;
       color: white;
-        font-size: 12px;
-        transition: background-color 0.3s;
+      font-size: 11px;
+      transition: background-color 0.3s;
     }
- button:hover {
-   bakcground-color: #555;
-   }
-    td.link-crudo {
-     font-size: 11px;
-      max-width: 250px;
-      word-break: break-all;
+
+    button:hover {
+      background-color: #555;
     }
   </style>
 </head>
-<body style="font-family: Arial; text-align: center; background: #111; color: #eee;">
-  <h1>LINKS</h1>
-    <h2><img src="logo.png" alt="Vinilo en Blanco" width="85%"></h2>
-  <p style="font-size: 11px;">Links Oficiales de Vinilo en Blanco</p>
-   <p style="font-size: 11px;">16 de Septiembre de 2025.</p>
-  <table>
-    <tbody>
-      <tr>
-        <td>Instagram</td>
-        <td class="link-crudo">https://instagram.com/viniloenblanco</td>
-        <td><button onclick="window.open('https://instagram.com/viniloenblanco','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://instagram.com/viniloenblanco')">Copiar</button></td>
-      </tr>
-      <tr>
-        <td>YouTube</td>
-        <td class="link-crudo">https://www.youtube.com/@ViniloEnBlanco</td>
-        <td><button onclick="window.open('https://www.youtube.com/@ViniloEnBlanco','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://www.youtube.com/@ViniloEnBlanco')">Copiar</button></td>
-      </tr>
-      <tr>
-        <td>Spotify</td>
-        <td class="link-crudo">https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF</td>
-        <td><button onclick="window.open('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF')">Copiar</button></td>
-      </tr>
-      <tr>
-        <td>SoundCloud</td>
-        <td class="link-crudo">https://www.soundcloud.com/viniloenblanco</td>
-        <td><button onclick="window.open('https://www.soundcloud.com/viniloenblanco','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://www.soundcloud.com/viniloenblanco')">Copiar</button></td>
-        <td>BandCamp</td>
-        <td class="link-crudo">https://viniloenblanco.bandcamp.com/</td>
-        <td><button onclick="window.open('https://viniloenblanco.bandcamp.com/','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://viniloenblanco.bandcamp.com/')">Copiar</button></td>
-        <td>TikTok</td>
-        <td class="link-crudo">https://www.tiktok.com/@viniloenblanco</td>
-        <td><button onclick="window.open('https://www.tiktok.com/@viniloenblanco','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://www.tiktok.com/@viniloenblanco')">Copiar</button></td>
-        <td>Facebook</td>
-        <td class="link-crudo">https://m.facebook.com/61580283870806/</td>
-        <td><button onclick="window.open('https://m.facebook.com/61580283870806/','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://m.facebook.com/61580283870806/')">Copiar</button></td>
-        <td>Threads</td>
-        <td class="link-crudo">https://www.threads.com/@viniloenblanco</td>
-        <td><button onclick="window.open('https://www.threads.com/@viniloenblanco','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('https://www.threads.com/@viniloenblanco')">Copiar</button></td>
-        <td>Correo</td>
-        <td class="link-crudo">viniloenblancobanda@gmail.com</td>
-        <td><button onclick="window.open('mailto:viniloenblancobanda@gmail.com','_blank')">Abrir</button></td>
-        <td><button onclick="copiarAlPortapapeles('viniloenblancobanda@gmail.com')">Copiar</button></td>
-      </tr>
-    </tbody>
-  </table>
+<body>
 
-  <script>
-    function copiarAlPortapapeles(texto) {
-      navigator.clipboard.writeText(texto).then(() => {
-        alert('¡Link copiado al portapapeles!');
-      }).catch(err => {
-        alert('Error al copiar: ' + err);
-      });
-    }
-  </script>
-  
-   <h2 style="text-align: center"><a href="/index.html" class="l">VOLVER AL INICIO</a></h2>
-    
-    <h2 style="text-align: left; margin-top:12%"><a href="/bio.html" class="l">PRENSA</a></h2>
-  </p>
-  <div id="footer-placeholder"></div>
+<h1>LINKS</h1>
+<h2><img src="logo.png" alt="Vinilo en Blanco" width="85%"></h2>
+<p style="font-size: 11px;">Links Oficiales de Vinilo en Blanco</p>
+<p style="font-size: 11px;">16 de Septiembre de 2025.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Instagram</td>
+      <td class="link-crudo"><span>https://instagram.com/viniloenblanco</span></td>
+      <td><button onclick="window.open('https://instagram.com/viniloenblanco','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://instagram.com/viniloenblanco')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>YouTube</td>
+      <td class="link-crudo"><span>https://www.youtube.com/@ViniloEnBlanco</span></td>
+      <td><button onclick="window.open('https://www.youtube.com/@ViniloEnBlanco','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://www.youtube.com/@ViniloEnBlanco')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>Spotify</td>
+      <td class="link-crudo"><span>https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF</span></td>
+      <td><button onclick="window.open('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://open.spotify.com/artist/5T6rb5wXVx7VAThGr3f7xF')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>SoundCloud</td>
+      <td class="link-crudo"><span>https://www.soundcloud.com/viniloenblanco</span></td>
+      <td><button onclick="window.open('https://www.soundcloud.com/viniloenblanco','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://www.soundcloud.com/viniloenblanco')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>BandCamp</td>
+      <td class="link-crudo"><span>https://viniloenblanco.bandcamp.com/</span></td>
+      <td><button onclick="window.open('https://viniloenblanco.bandcamp.com/','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://viniloenblanco.bandcamp.com/')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>TikTok</td>
+      <td class="link-crudo"><span>https://www.tiktok.com/@viniloenblanco</span></td>
+      <td><button onclick="window.open('https://www.tiktok.com/@viniloenblanco','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://www.tiktok.com/@viniloenblanco')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>Facebook</td>
+      <td class="link-crudo"><span>https://m.facebook.com/61580283870806/</span></td>
+      <td><button onclick="window.open('https://m.facebook.com/61580283870806/','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://m.facebook.com/61580283870806/')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>Threads</td>
+      <td class="link-crudo"><span>https://www.threads.com/@viniloenblanco</span></td>
+      <td><button onclick="window.open('https://www.threads.com/@viniloenblanco','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('https://www.threads.com/@viniloenblanco')">Copiar</button></td>
+    </tr>
+    <tr>
+      <td>Correo</td>
+      <td class="link-crudo"><span>viniloenblancobanda@gmail.com</span></td>
+      <td><button onclick="window.open('mailto:viniloenblancobanda@gmail.com','_blank')">Abrir</button></td>
+      <td><button onclick="copiarAlPortapapeles('viniloenblancobanda@gmail.com')">Copiar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  function copiarAlPortapapeles(texto) {
+    navigator.clipboard.writeText(texto).then(() => {
+      alert('¡Link copiado al portapapeles!');
+    }).catch(err => {
+      alert('Error al copiar: ' + err);
+    });
+  }
+</script>
+
+<h2 style="text-align: center"><a href="/index.html" class="l">VOLVER AL INICIO</a></h2>
+<h2 style="text-align: left; margin-top:12%"><a href="/bio.html" class="l">PRENSA</a></h2>
+
+<div id="footer-placeholder"></div>
 <script>
 fetch('bottom.html')
   .then(res => res.text())
   .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-</script> </body>
+</script>
+
+</body>
 </html>
